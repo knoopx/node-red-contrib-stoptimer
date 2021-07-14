@@ -9,6 +9,7 @@ module.exports = (RED) => {
 
     onInput = (msg) => {
       if (msg.stop) {
+        this.status("stop")
         this.send({ ...msg, payload: this.elapsedTime() })
         this.startTime = null
       } else if (msg.reset) {
