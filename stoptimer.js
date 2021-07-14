@@ -3,6 +3,7 @@ module.exports = (RED) => {
     constructor(config) {
       RED.nodes.createNode(this, config)
       this.on("input", this.onInput)
+      this.on("close", this.onClose)
       this.startTime = null
     }
 
@@ -35,6 +36,12 @@ module.exports = (RED) => {
 
     elapsedTime = () => {
       return Date.now() - this.startTime
+    }
+
+    onClose = () => {
+      this.startTime = null
+      this.status({})
+      clearTimeout(this.timeout)
     }
   }
 
