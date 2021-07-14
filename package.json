@@ -1,0 +1,14 @@
+{
+  "name": "node-red-contrib-stoptimer",
+  "version": "1.0.0",
+  "description": "simple stoptimer",
+  "author": "Víctor Martínez",
+  "license": "ISC",
+  "node-red": {
+    "nodes": {
+      "stoptimer": "stoptimer.js"
+    }
+  },
+  "dependencies": {
+  }
+}

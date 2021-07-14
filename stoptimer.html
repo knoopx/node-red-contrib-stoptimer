@@ -1,0 +1,19 @@
+<script type="text/javascript">
+RED.nodes.registerType("stoptimer", {
+  category: "function",
+  color: "#C7E9C0",
+  defaults: {
+    name: { value: "" },
+  },
+  inputs: 1,
+  outputs: 1,
+  icon: "font-awesome/fa-clock-o",
+
+  label() {
+    return this.name || "stoptimer"
+  },
+
+  oneditprepare() {},
+  oneditsave() {},
+})
+</script>
